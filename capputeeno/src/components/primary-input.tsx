@@ -13,7 +13,7 @@ import { InputHTMLAttributes } from "react"
 export const PrimaryInput = styled.input`
     width: 352px;             /* largura fixa do input */
     border-radius: 8px;       /* cantos arredondados */
-    padding: 10px 16px;       /* espaçamento interno */
+    padding: 10px 40px;  /* espaçamento interno */
     border: none;             /* remove a borda padrão */
 
     background-color: var(--bg-secondary); /* usa variável CSS definida globalmente */
