@@ -9,6 +9,7 @@ import { Saira } from "next/font/google";
 
 // Importa os estilos globais da aplicação (CSS aplicado em todas as páginas)
 import "./globals.css";
+import { FilterContextProvider } from "@/contexts/filetr-context";
 
 
 // Configura a fonte Saira
@@ -41,10 +42,12 @@ export default function RootLayout({
         className={saira.className} adiciona dinamicamente a classe da fonte
       */}
       <body className={saira.className}>
-        {/* Header fixo em todas as páginas */}
-        <Header />
-        {/* Renderiza o conteúdo da página atual */}
-        {children}
+        <FilterContextProvider>
+          {/* Header fixo em todas as páginas */}
+          <Header />
+          {/* Renderiza o conteúdo da página atual */}
+          {children}
+        </FilterContextProvider>
       </body>
     </html>
   );
